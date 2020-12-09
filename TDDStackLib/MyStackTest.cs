@@ -30,5 +30,12 @@ namespace TDDStackLib
  	    
  	        Assert.Throws<InvalidOperationException>(() => stack.Push(1));
  	    }
+
+        [Test]
+        public void EmptyTest()
+        {
+            MyStack stack = new MyStack(0);
+            Assert.Throws<InvalidOperationException>(() => stack.Pop());
+        }
     }
 }
