@@ -33,8 +33,15 @@ namespace TDDStackLib
 
         public int Pop()
         {
-            Size--;
-            return array[Size];
+            if (Size > 0)
+            {
+                Size--;
+                return array[Size];
+            }
+            else
+            {
+                throw new InvalidOperationException();
+            }
         }
     }
 }
