@@ -22,8 +22,7 @@ namespace TDDStackLib
         {
             if (Size < Length)
             {
-                array[Size] = value;
-                Size++;
+                array[Size++] = value;
             }
             else
             {
@@ -35,8 +34,7 @@ namespace TDDStackLib
         {
             if (Size > 0)
             {
-                Size--;
-                return array[Size];
+                return array[--Size];
             }
             else
             {
