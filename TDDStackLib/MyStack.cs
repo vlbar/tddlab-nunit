@@ -8,23 +8,26 @@ namespace TDDStackLib
 {
     class MyStack
     {
+        private int[] array;
         public int Size { get; private set; }
-
         public int Length { get; private set; }
 
         public MyStack(int length)
         {
             Length = length;
+            array = new int[length];
         }
 
         public void Push(int value)
         {
-            throw new NotImplementedException();
+            array[Size] = value;
+            Size++;
         }
 
         public int Pop()
         {
-            throw new NotImplementedException();
+            Size--;
+            return array[Size];
         }
     }
 }
