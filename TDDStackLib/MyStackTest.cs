@@ -21,5 +21,14 @@ namespace TDDStackLib
             Assert.AreEqual(8, stack.Pop());
             Assert.AreEqual(2, stack.Size);
         }
+
+        [Test]
+ 	    public void OverflowTest()
+ 	    {
+ 	        MyStack stack = new MyStack(1);
+ 	        stack.Push(2);
+ 	    
+ 	        Assert.Throws<InvalidOperationException>(() => stack.Push(1));
+ 	    }
     }
 }
