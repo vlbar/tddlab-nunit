@@ -20,8 +20,15 @@ namespace TDDStackLib
 
         public void Push(int value)
         {
-            array[Size] = value;
-            Size++;
+            if (Size < Length)
+            {
+                array[Size] = value;
+                Size++;
+            }
+            else
+            {
+                throw new InvalidOperationException();
+            }
         }
 
         public int Pop()
